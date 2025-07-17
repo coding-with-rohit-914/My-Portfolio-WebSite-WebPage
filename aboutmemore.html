@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="aboutmemore.css">
+    <title>Portfolio WebSite</title>
+  </head>
+  <body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                <img src="RN.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><span class="a1">• About Me •</span></h1>
+                    <h3 class="p">• I am a proactive individual with effective organizational abilities and a passion for continuous learning. Seeking an entry-level role where I can contribute my enthusiasm, drive, and determination to contribute to organizational growth and success.</h3>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>• Python • Django</span><br>WebSite Interfaces</li>
+                            <li><span>• Html • Css • Bootstrap • JavaScript</span><br>WebPage Interfaces</li>
+                            <li><span>• Web Development</span><br>Building WebSites</li>
+                            <li><span>• App Development</span><br>Building Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>• 2024 </span><br>Python Full Stack Developer Training at Narayana Tech House,Hyderabad</li>
+                            <li><span>• 2025 - Current</span><br>Freasher</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>• 2024 To 2026 : Master Of Computer Applications | SGPA - 9.14</span><br>MCA From KJEI's Trinity Academy of Engineering,Pune,Maharashatra 411048</li>
+                            <li><span>• 2021 To 2024 : Bachelor Of Computer Science | CGPA - 07.45</span><br>BCS From Jijamata College Of Science & Art's,Bhenda,Ahmednagar,Maharashatra 414605</li>
+                            <li><span>• 2021 : HSC | Percentage - 53.33</span> <br> HSC From Jijamata Juniour College,Bhenda,Ahmednagar,Maharashatra 414605</li>
+                            <li><span>• 2019 : SSC | Percentage - 62.40</span> <br> SSC From Jijamata Madhyamik Vidhylay,Bhenda,Ahmednagar,Maharashatra 414605</li>
+                            <li><span>• 2023 To 2024 : Python Full Stack Course</span><br>Python Full Stack Developer Training at Narayana Tech House,Hyderabad</li>
+                        </ul>
+                    </div>
+                    <a href="Rohit-CV.pdf" download class="btn">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script For About Me -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+  </body>
+</html>
